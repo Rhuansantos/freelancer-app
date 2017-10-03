@@ -4,6 +4,7 @@
   "private": true,
   "devDependencies": {
     "babel-preset-react-native-stage-0": "^1.0.1",
+    "flow-bin": "^0.56.0",
     "jest-expo": "^21.0.2",
     "react-test-renderer": "16.0.0-alpha.12"
   },
