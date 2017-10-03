@@ -1,0 +1,14 @@
+{
+  "name": "freelancer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {},
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "glob": "^7.1.1"
+  }
+}
