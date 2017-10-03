@@ -1,3 +1,9 @@
 node_modules/
 .expo/
 npm-debug.*
+
+*.xcworkspacedata
+
+*.xcuserstate
+
+*.plist
