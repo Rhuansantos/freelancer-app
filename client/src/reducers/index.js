@@ -6,14 +6,13 @@ import * as createReducer from '../lib/createReducer';
 
 // Start with two routes: The Main screen, with the Login screen on top.
 const firstAction = AppNavigator.router.getActionForPathAndParams('Main');
-
 const tempNavState = AppNavigator.router.getStateForAction(firstAction);
-
 const secondAction = AppNavigator.router.getActionForPathAndParams('Profile');
-
 const initialNavState = AppNavigator.router.getStateForAction(
   firstAction
 );
+
+
 
 function nav(state = initialNavState, action) {
   let nextState;
