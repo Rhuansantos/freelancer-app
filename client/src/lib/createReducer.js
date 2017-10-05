@@ -7,5 +7,4 @@ export default function createReducer(initialState, handlers) {
 		return state
 	  }
 	}
-  }
-  
+}
