@@ -24,6 +24,7 @@
     "react-native": "^0.48.4",
     "react-native-animated-linear-gradient": "^1.0.2",
     "react-native-linear-gradient": "^2.3.0",
+    "react-native-vector-icons": "^4.4.0",
     "react-navigation": "^1.0.0-beta.13",
     "react-redux": "^5.0.6",
     "redux": "^3.7.2",
