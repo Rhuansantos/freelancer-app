@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Button, StyleSheet, Text, View, TextInput, PixelRatio, Dimensions } from 'react-native';
+import { Text, View, TextInput, Dimensions } from 'react-native';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 export default class Search extends Component {
 	constructor(props) {
@@ -11,6 +12,7 @@ export default class Search extends Component {
 	render() {
 	  return (
 		<View style={styles.container}>
+			<Icon name="ios-person" size={30} color="white" />
 		  <TextInput
 			style={styles.searchInput}
 			placeholderTextColor="#336B9C"
