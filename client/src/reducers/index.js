@@ -1,8 +1,7 @@
 import { combineReducers } from 'redux';
 import { NavigationActions } from 'react-navigation';
-
 import { AppNavigator } from '../navigators/AppNavigator';
-import * as createReducer from '../lib/createReducer';
+
 
 // Start with two routes: The Main screen, with the Login screen on top.
 const firstAction = AppNavigator.router.getActionForPathAndParams('Main');
@@ -11,7 +10,6 @@ const secondAction = AppNavigator.router.getActionForPathAndParams('Profile');
 const initialNavState = AppNavigator.router.getStateForAction(
   firstAction
 );
-
 
 
 function nav(state = initialNavState, action) {
