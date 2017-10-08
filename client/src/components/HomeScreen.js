@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Button, StyleSheet, Text, View, FlatList} from 'react-native';
 
-import Search from './Search';
-
+// import Search from './Search';
+import Search from './SearchB';
 
 class HomeScreen extends Component{
 	

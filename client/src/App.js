@@ -30,7 +30,7 @@ class App extends Component {
 
   render() {
     return (
-		<AnimatedLinearGradient customColors={this.presetColors.mainBackground} speed={4000}>
+		<AnimatedLinearGradient customColors={this.presetColors.mainBackground} speed={2000}>
 			<Provider store={this.store}>
 				<AppWithNavigationState />
 			</Provider>
