@@ -9,6 +9,7 @@ import ProfileScreen from '../components/ProfileScreen';
 
 export const AppNavigator = DrawerNavigator({
   Main: { screen: HomeScreen },
+  // Main: { screen: ProfileScreen },
   Profile: { screen: ProfileScreen }
 
 });
