@@ -10,6 +10,8 @@ class HomeScreen extends Component{
 	render() {
 		return (
 			<View style={styles.container}>
+				<Text style={styles.logo}>Freelancer</Text>
+				<Text style={styles.slogan}>The easiest way to find your services</Text>
 				<Search />
 				<FlatList
 				data={[{key: 'a'}, {key: 'b'}]}
@@ -33,6 +35,14 @@ const styles = {
 	  marginTop: 50,
 	  justifyContent: 'center',
 	  alignItems: 'center'
+	},
+	logo: {
+		color: 'white',
+		fontSize: 40,
+	},
+	slogan: {
+		color: 'white',
+		fontSize: 16
 	}
 };
   
