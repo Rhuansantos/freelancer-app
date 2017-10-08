@@ -8,6 +8,7 @@ import {
 	Dimensions,
 	ScrollView 
 } from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 
 class ProfileScreen extends Component{
@@ -19,11 +20,15 @@ class ProfileScreen extends Component{
 					<Image style={styles.profileImage} source={require('../images/examples/12885852_1731167487105536_7785043722532779008_o.png')} />
 					<Text style={styles.profileName}>{'Rhuan Santos'.toUpperCase()}</Text>
 					<View style={styles.profileInfo}>
-						<Text style={styles.profileLabels}>RATING:</Text>
-							<Text></Text>
+						<Text style={styles.profileLabels}>RATING: <Icon name="star" size={13} color="white" />
+							<Icon name="star" size={13} color="white" />
+							<Icon name="star" size={13} color="white" />
+							<Icon name="star" size={13} color="white" />
+							<Icon name="star-half-empty" size={13} color="white" />
+						</Text>
 						<Text style={styles.profileLabels}>DESCRIPTION:</Text>
 							<Text style={styles.profileDescription}>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry</Text>
-						<Text style={styles.profileLabels}>PRICE: <Text style={styles.profileDescription}>18/p</Text></Text>	
+						<Text style={styles.profileLabels}>PRICE: <Text style={styles.profileDescription}>$18 per hour</Text></Text>	
 					</View>
 					<View style={styles.profileJobs}>
 						<Text style={styles.profileLabels}>GALLERY</Text>
