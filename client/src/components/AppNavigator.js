@@ -5,11 +5,12 @@ import { addNavigationHelpers, DrawerNavigator } from 'react-navigation';
 
 import HomeScreen from './HomeScreen';
 import ProfileScreen from './ProfileScreen';
+import ResultScreen from './ResultScreen';
 
 
 export const AppNavigator = DrawerNavigator({
   Main: { screen: HomeScreen },
-  // Main: { screen: ProfileScreen },
+  Result: { screen: ResultScreen },
   Profile: { screen: ProfileScreen }
 
 });
