@@ -14,7 +14,7 @@ class Rating extends Component {
 	render(){
 		return(
 			<View style={styles.cardContainer}>
-				<Text style={styles.profileLabels}>RATING: <Icon name="star" size={13} color="white" />
+				<Text style={styles.labels}>RATING: <Icon name="star" size={13} color="white" />
 					<Icon name="star" size={13} color="white" />
 					<Icon name="star" size={13} color="white" />
 					<Icon name="star" size={13} color="white" />
@@ -27,15 +27,16 @@ class Rating extends Component {
 
 
 const styles = {
-	cardContainer: {
-		// flex: 1,
-		// height: 200,
-	},
 	profileImage: {
 		width: 100,
 		height: 100,
 		borderRadius: 50
-	}
+	},
+	labels: {
+		color: 'white',
+		fontWeight: 'bold',
+		paddingTop: 10
+	},
 }
 
 export { Rating };

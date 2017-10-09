@@ -18,25 +18,35 @@ class Cards extends Component {
 		return(
 			<View style={styles.cardContainer}>
 				<Image style={styles.profileImage} source={require('../../images/examples/12885852_1731167487105536_7785043722532779008_o.png')} />
-				<Text>Name:</Text>
-				<Text>Last Activity:</Text>
+				<Text style={styles.profileLabels}>Name:</Text>
+				<Text style={styles.profileLabels}>Last Activity:</Text>
 				<Rating />
 			</View>
 		);
 	}
 }
 
+const {height, width} = Dimensions.get('window');
 
 const styles = {
 	cardContainer: {
-		flex: 1,
+		width: width / 1.1,
 		height: 200,
+		borderRadius: 7,
+		marginTop: 20,
+		backgroundColor: '#E6E6EA',
+		padding: 10,
 	},
 	profileImage: {
 		width: 100,
 		height: 100,
 		borderRadius: 50
-	}
+	},
+	profileLabels: {
+		color: '#336B9C',
+		fontWeight: 'bold',
+		paddingTop: 10
+	},
 }
 
 export { Cards }
