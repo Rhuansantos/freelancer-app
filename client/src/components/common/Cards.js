@@ -6,10 +6,10 @@ import {
 	Dimensions, 
 	View} 
 from 'react-native';
-import Rating from './Rating';
+import { Rating } from './';
 
 
-export default class Cards extends Component {
+class Cards extends Component {
 	constructor(){
 		super();
 		this.data = [];
@@ -17,7 +17,7 @@ export default class Cards extends Component {
 	render(){
 		return(
 			<View style={styles.cardContainer}>
-				<Image style={styles.profileImage} source={require('../images/examples/12885852_1731167487105536_7785043722532779008_o.png')} />
+				<Image style={styles.profileImage} source={require('../../images/examples/12885852_1731167487105536_7785043722532779008_o.png')} />
 				<Text>Name:</Text>
 				<Text>Last Activity:</Text>
 				<Rating />
@@ -38,3 +38,5 @@ const styles = {
 		borderRadius: 50
 	}
 }
+
+export { Cards }

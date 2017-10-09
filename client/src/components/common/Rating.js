@@ -9,7 +9,7 @@ from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 
-export default class Rating extends Component {
+class Rating extends Component {
 
 	render(){
 		return(
@@ -37,3 +37,5 @@ const styles = {
 		borderRadius: 50
 	}
 }
+
+export { Rating };

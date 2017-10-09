@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Button, StyleSheet, Text, View, TextInput, PixelRatio } from 'react-native';
 
-export default class Search extends Component {
+class Search extends Component {
 	constructor(props) {
 	  super(props);
 	  this.state = {text: ''};
@@ -38,5 +38,7 @@ export default class Search extends Component {
 		paddingBottom: 10,
 		borderBottomWidth: 0.7 / PixelRatio.get()
 	}
-  };
+	};
+	
+	export { SearchB };
   

@@ -8,7 +8,7 @@ import {
 	Dimensions,
 	ScrollView 
 } from 'react-native';
-import Rating from './Rating';
+import { Rating } from './common/';
 
 
 export default class ProfileScreen extends Component{

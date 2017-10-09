@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { StyleSheet, Text, View, FlatList} from 'react-native';
-import Cards from './Cards';
+
+import { Cards } from './common/'
 
 
 export default class ResultScreen extends Component{
