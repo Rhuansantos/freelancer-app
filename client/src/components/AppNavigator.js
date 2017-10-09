@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { addNavigationHelpers, DrawerNavigator } from 'react-navigation';
 
-import HomeScreen from '../components/HomeScreen';
-import ProfileScreen from '../components/ProfileScreen';
+import HomeScreen from './HomeScreen';
+import ProfileScreen from './ProfileScreen';
 
 
 export const AppNavigator = DrawerNavigator({
