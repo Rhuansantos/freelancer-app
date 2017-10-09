@@ -1,20 +1,16 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
 import AnimatedLinearGradient from 'react-native-animated-linear-gradient';
-
-import AppReducer from './reducers';
-import AppWithNavigationState from './navigators/AppNavigator';
-
+import store from './store/index';
+import AppWithNavigationState from './components/AppNavigator';
 
 // Main class
 class App extends Component {
   
-  store = createStore(AppReducer); // creating store
-
   constructor(){
 		super();
+		this.store = store;
 		this.presetColors = {
 			mainBackground: [
 				'rgb(54, 104, 151)',

@@ -1,4 +1,4 @@
-import { AppNavigator } from '../navigators/AppNavigator';
+import { AppNavigator } from '../components/AppNavigator';
 
 // Start with two routes: The Main screen, with the Login screen on top.
 const firstAction = AppNavigator.router.getActionForPathAndParams('Main');
