@@ -1,17 +1,23 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { StyleSheet, Text, View, FlatList} from 'react-native';
+import Cards from './Cards';
 
 
-class ResultsScreen extends Component{
+export default class ResultScreen extends Component{
 	
+
+	renderCards({item, index}){
+		return(
+			<Cards>fasfasfas</Cards>
+		);
+	}
 	render() {
 		return (
 			<View style={styles.container}>
-				<Text>fasfas</Text>
 				<FlatList
-				data={[{key: 'a'}, {key: 'b'}]}
-				renderItem={({item}) => <Text>{item.key}</Text>}
+				data={[{key: 'a'}, {key: 'b'}]} // data goes here
+				renderItem={this.renderCards} // function to render the data
 			  />
 			</View>
 		);
@@ -28,5 +34,3 @@ const styles = {
 	}
 };
   
-
-export default ResultsScreen;

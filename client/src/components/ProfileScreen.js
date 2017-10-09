@@ -11,8 +11,7 @@ import {
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 
-class ProfileScreen extends Component{
-	
+export default class ProfileScreen extends Component{
 	render() {
 		return (
 			<ScrollView>
@@ -86,4 +85,3 @@ const styles = {
 	}
 };
 
-export default ProfileScreen;

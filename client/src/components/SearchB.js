@@ -31,7 +31,7 @@ export default class Search extends Component {
 	  alignItems: 'center'
 	},
 	searchInput: {
-		height: 30,
+		height: 35,
 		fontSize: 30,
 		color: 'white',
 		borderBottomColor: '#E6E6EA',

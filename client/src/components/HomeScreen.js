@@ -5,8 +5,13 @@ import { Button, StyleSheet, Text, View, FlatList} from 'react-native';
 // import Search from './Search';
 import Search from './SearchB';
 
-class HomeScreen extends Component{
+export default class HomeScreen extends Component{
 	
+	searchResults({results, index}){
+		return(
+			<Text></Text>
+		);
+	}
 	render() {
 		return (
 			<View style={styles.container}>
@@ -15,7 +20,7 @@ class HomeScreen extends Component{
 				<Search />
 				<FlatList
 				data={[{key: 'a'}, {key: 'b'}]}
-				renderItem={({item}) => <Text>{item.key}</Text>}
+				renderItem={this.searchResults}
 			  />
 			</View>
 		);
@@ -46,5 +51,3 @@ const styles = {
 	}
 };
   
-
-export default HomeScreen;
