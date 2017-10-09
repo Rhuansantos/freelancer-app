@@ -7,6 +7,7 @@
     "flow-bin": "^0.56.0",
     "jest-expo": "^21.0.2",
     "react-test-renderer": "16.0.0lpha.12",
+    "reactotron-react-native": "^1.12.3",
     "redux-devtools": "^3.4.0"
   },
   "scripts": {

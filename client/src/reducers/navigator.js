@@ -1,3 +1,4 @@
+import { NavigationActions } from 'react-navigation';
 import { AppNavigator } from '../components/AppNavigator';
 
 // Start with two routes: The Main screen, with the Login screen on top.

@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import AnimatedLinearGradient from 'react-native-animated-linear-gradient';
 import store from './store/index';
 import AppWithNavigationState from './components/AppNavigator';
+import './ReactotronConfig';
 
 // Main class
 class App extends Component {
