@@ -6,6 +6,7 @@ import {
 	Dimensions, 
 	View} 
 from 'react-native';
+import Rating from './Rating';
 
 
 export default class Cards extends Component {
@@ -19,7 +20,7 @@ export default class Cards extends Component {
 				<Image style={styles.profileImage} source={require('../images/examples/12885852_1731167487105536_7785043722532779008_o.png')} />
 				<Text>Name:</Text>
 				<Text>Last Activity:</Text>
-				<Text>Rating:</Text>
+				<Rating />
 			</View>
 		);
 	}
