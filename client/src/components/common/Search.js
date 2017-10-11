@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Button, StyleSheet, Text, View, TextInput, PixelRatio } from 'react-native';
 
-export default class Search extends Component {
+class Search extends Component {
 	constructor(props) {
 	  super(props);
 	  this.state = {text: ''};
@@ -31,12 +31,14 @@ export default class Search extends Component {
 	  alignItems: 'center'
 	},
 	searchInput: {
-		height: 30,
+		height: 35,
 		fontSize: 30,
 		color: 'white',
 		borderBottomColor: '#E6E6EA',
 		paddingBottom: 10,
 		borderBottomWidth: 0.7 / PixelRatio.get()
 	}
-  };
+	};
+	
+	export { Search };
   
