@@ -8,11 +8,25 @@ import ProfileScreen from './ProfileScreen';
 import ResultScreen from './ResultScreen';
 
 
+const noTransitionConfig = () => ({
+  transitionSpec: {
+    duration: 0,
+    timing: Animated.timing,
+    easing: Easing.step0
+  }
+})
+
 export const AppNavigator = DrawerNavigator({
   Main: { screen: HomeScreen },
   Result: { screen: ResultScreen },
   Profile: { screen: ProfileScreen }
 
+}, {
+  // Default config for all screens
+  headerMode: 'float',
+  title: 'Main',
+  initialRouteName: 'Main',
+  transitionConfig: noTransitionConfig
 });
 
 const AppWithNavigationState = ({ dispatch, nav }) => (
