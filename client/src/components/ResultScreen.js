@@ -1,23 +1,24 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { StyleSheet, Text, View, FlatList} from 'react-native';
+import { StyleSheet, Text, View, FlatList, Button} from 'react-native';
 
 import { Cards } from './common/'
 
 
 export default class ResultScreen extends Component{
 	
-
 	renderCards({item, index}){
 		return(
-			<Cards>fasfasfas</Cards>
+			<View>
+				<Cards />
+			</View>
 		);
 	}
 	render() {
 		return (
 			<View style={styles.container}>
 				<FlatList
-				data={[{key: 'a'}, {key: 'b'}]} // data goes here
+				data={[{key: 'a'}, {key: 'b'}, {key: 'c'}, {key: 'd'}, {key: 'f'}, {key: 'g'}, {key: 'h'}]} // data goes here
 				renderItem={this.renderCards} // function to render the data
 			  />
 			</View>
