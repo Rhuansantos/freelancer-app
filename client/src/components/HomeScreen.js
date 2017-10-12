@@ -7,7 +7,8 @@ export default class HomeScreen extends Component{
 	
 	searchResults({results, index}){
 		return(
-			<Text></Text>
+			<View style={{width: 100, height: 100}}>
+			</View>
 		);
 	}
 	render() {

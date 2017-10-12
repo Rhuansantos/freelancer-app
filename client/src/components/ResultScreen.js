@@ -34,13 +34,20 @@ class ResultScreen extends Component{
 	}
 	render() {
 		//the Header components should recive the navigation props
+		console.log(this.props.navigation);
 		return (
 			<View style={styles.container}>
-				<Header test={this.props.navigation} /> 
+				<Header test={this.props.navigation.navigate} /> 
+				<Button
+					onPress={() => this.props.navigation.navigate('Profile')}
+					title="Learn More"
+					color="#841584"
+					accessibilityLabel="Learn more about this purple button"
+				/>
 				<FlatList
 				data={[{key: 'a'}, {key: 'b'}, {key: 'c'}, {key: 'd'}, {key: 'f'}, {key: 'g'}, {key: 'h'}]} // data goes here
 				renderItem={this.renderCards} // function to render the data
-			  />
+				/>
 			</View>
 		);
 	}

@@ -24,7 +24,7 @@ import PropTypes from 'prop-types';
 class Header extends Component {
 	constructor(){
 		super();
-		console.log(this);
+		// console.log(this);
 	}
 	render(){
 		console.log(this.test);
