@@ -29,9 +29,6 @@ HomeScreen.propTypes = {
   navigation: PropTypes.object.isRequired,
 };
 
-HomeScreen.navigationOptions = {
-  title: null,
-};
 
 const styles = {
 	container: {

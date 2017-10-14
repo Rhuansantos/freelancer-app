@@ -7,6 +7,7 @@ import { addNavigationHelpers, DrawerNavigator } from 'react-navigation';
 import HomeScreen from './HomeScreen';
 import ProfileScreen from './ProfileScreen';
 import ResultScreen from './ResultScreen';
+import Menu from './common/Menu';
 
 const noTransitionConfig = () => ({
   transitionSpec: {
@@ -25,12 +26,11 @@ export const AppNavigator = DrawerNavigator({
   // Default config for all screens
     drawerWidth: 300,
     drawerPosition: 'left',
-    drawerBackgroundColor: 'black',
-    useNativeAnimations: true
-    
+    drawerBackgroundColor: 'blue',
+    useNativeAnimations: true,
+    // contentComponent: props => <Menu />  
 });
 
-// contentComponent: props => <Text>fasfafa</Text>
 
 const AppWithNavigationState = ({ dispatch, nav }) => (
   <AppNavigator navigation={addNavigationHelpers({ dispatch, state: nav })} />

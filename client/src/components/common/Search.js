@@ -9,6 +9,7 @@ class Search extends Component {
 	}
   
 	render() {
+		console.log('from search', this);
 	  return (
 		<View style={styles.container}>
 		  <TextInput
@@ -16,7 +17,7 @@ class Search extends Component {
 			placeholder="What are you looking for?"
 			onChangeText={(text) => this.setState({text})}
 		  />
-		  <Text style={{padding: 10, fontSize: 42}}>
+		  <Text style={{padding: 10, fontSize: 42}} onPress={() => this.props.navigation.navigate('Profile')}>
 			{this.state.text.split(' ').map((word) => word && 'results here').join(' ')}
 		  </Text>
 		</View>
