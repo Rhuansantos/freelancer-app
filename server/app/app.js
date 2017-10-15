@@ -1,11 +1,13 @@
 const express = require('express');
 const glob = require('glob');
 const bodyParser = require('body-parser');
+const pug = require('pug');
+const hbs = require('hbs');
 
 module.exports = function(app) {
   // Configure view engine to render EJS templates.
   app.set('views', __dirname + '/views');
-  app.set('view engine', 'ejs');
+  app.set('view engine', 'hbs');
 
   app.use(bodyParser.json());
   app.use(bodyParser.urlencoded({extended: true}));
