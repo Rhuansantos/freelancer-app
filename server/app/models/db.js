@@ -1,6 +1,8 @@
 var mongoose = require('mongoose');
 
-mongoose.connect('mongodb://' + process.env.MONGO_HOST + '/' + process.env.MONGO_DATABASE);
+// mongoose.connect('mongodb://' + process.env.MONGO_HOST + '/' + process.env.MONGO_DATABASE);
+
+mongoose.connect('mongodb://localhost/freelance-app');
 
 var db = mongoose.connection;
 

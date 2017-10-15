@@ -24,9 +24,5 @@ userSchema.pre('save', function(next){
 	next();
 });
 
-userSchema.methods.getAge = function() {
-	console.log('fasfsa');
-	
-};
 
-module.exports = mongoose.model('User', userSchema);
+module.exports = mongoose.model('users', userSchema);
