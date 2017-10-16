@@ -18,8 +18,6 @@ module.exports = function(app) {
     require(modelFileName);
   });
 
-  
-
   // include all the controllers
   let controllers = glob.sync(__dirname + '/controllers/*.js');
   controllers.forEach(function(controllerFileName){
