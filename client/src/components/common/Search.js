@@ -1,22 +1,28 @@
 import  React, { Component }  from 'react';
 import {
-  AppRegistry, StyleSheet, Text, View, AlertIOS
+  AppRegistry, StyleSheet, Text, View, AlertIOS, Dimensions, PixelRatio
 } from 'react-native';
 import axios from 'axios';
 
 import AutoComplete from 'react-native-autocomplete';
 import Services from '../../data.json';
 
+const {height, width} = Dimensions.get('window');
+
 const styles = StyleSheet.create({
   autocomplete: {
-	alignSelf: 'stretch',
-	width: 300,
+	// alignSelf: 'stretch',
+	  width: width / 1.1,
     height: 50,
     margin: 10,
     marginTop: 50,
-    backgroundColor: '#FFF',
-    borderColor: 'lightblue',
-    borderWidth: 1,
+    color: 'white',
+    // backgroundColor: '#FFF',
+    // borderColor: 'lightblue',
+    // borderWidth: 1,
+    borderBottomColor: 'white',
+		paddingBottom: 10,
+		borderBottomWidth: 1 / PixelRatio.get()
   },
  container: {
     flex: 1,
@@ -30,8 +36,8 @@ class Search extends Component {
 
   constructor(props) {
     super(props);
-	this.onTyping = this.onTyping.bind(this);
-	this.state.Search = [];
+    this.onTyping = this.onTyping.bind(this);
+    this.state.Search = [];
   }
 
   	// api goes here
@@ -57,7 +63,7 @@ class Search extends Component {
 		// let values = ["Saab", "Volvo", "BMW"];
 		this.setState({ Search: Services });
 
-		console.log(this.state.Search);
+		// console.log(this.state.Search);
 	}
 
   onTyping(text) {
@@ -91,20 +97,20 @@ class Search extends Component {
           autoCompleteTableTopOffset={10}
           autoCompleteTableLeftOffset={20}
           autoCompleteTableSizeOffset={-40}
-          autoCompleteTableBorderColor="lightblue"
-          autoCompleteTableBackgroundColor="azure"
+          autoCompleteTableBorderColor="transparent"
+          autoCompleteTableBackgroundColor="transparent"
           autoCompleteTableCornerRadius={8}
           autoCompleteTableBorderWidth={1}
 
           autoCompleteFontSize={15}
           autoCompleteRegularFontName="Helvetica Neue"
           autoCompleteBoldFontName="Helvetica Bold"
-          autoCompleteTableCellTextColor={'dimgray'}
+          autoCompleteTableCellTextColor={'white'}
 
           autoCompleteRowHeight={40}
           autoCompleteFetchRequestDelay={100}
 
-          maximumNumberOfAutoCompleteRows={6}
+          maximumNumberOfAutoCompleteRows={10}
         />
       </View>
     );
