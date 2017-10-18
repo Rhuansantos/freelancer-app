@@ -117,5 +117,4 @@ class Search extends Component {
   }
 }
 
-
 export { Search };

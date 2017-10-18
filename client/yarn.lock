@@ -3610,12 +3610,6 @@ react-native-animated-linear-gradient@^1.0.2:
   dependencies:
     rgb2hex "^0.1.0"
 
-react-native-autocomplete-input@^3.4.0:
-  version "3.4.0"
-  resolved "https://registry.yarnpkg.com/react-native-autocomplete-input/-/react-native-autocomplete-input-3.4.0.tgz#1e3f2457a849b1de4abb7561b750594038468fcd"
-  dependencies:
-    prop-types "^15.5.10"
-
 react-native-autocomplete@^0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/react-native-autocomplete/-/react-native-autocomplete-0.3.0.tgz#5231fd672e64880bff288a790286ba09374a9a27"
