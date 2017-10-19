@@ -7,7 +7,8 @@ export default class HomeScreen extends Component{
 	
 	searchResults({results, index}){
 		return(
-			<Text></Text>
+			<View style={{width: 100, height: 100}}>
+			</View>
 		);
 	}
 	render() {
@@ -15,11 +16,11 @@ export default class HomeScreen extends Component{
 			<View style={styles.container}>
 				<Text style={styles.logo}>Freelancer</Text>
 				<Text style={styles.slogan}>The easiest way to find your services</Text>
-				<Search />
+				<Search screenProps={this.props.navigation} />
 				<FlatList
 				data={[{key: 'a'}, {key: 'b'}]}
 				renderItem={this.searchResults}
-			  />
+				/>
 			</View>
 		);
 	}
@@ -27,10 +28,10 @@ export default class HomeScreen extends Component{
 HomeScreen.propTypes = {
   navigation: PropTypes.object.isRequired,
 };
-
 HomeScreen.navigationOptions = {
-  title: null,
+  title: 'Search',
 };
+
 
 const styles = {
 	container: {
