@@ -16,17 +16,20 @@ export default class HomeScreen extends Component{
 			<View style={styles.container}>
 				<Text style={styles.logo}>Freelancer</Text>
 				<Text style={styles.slogan}>The easiest way to find your services</Text>
-				<Search />
+				<Search screenProps={this.props.navigation} />
 				<FlatList
 				data={[{key: 'a'}, {key: 'b'}]}
 				renderItem={this.searchResults}
-			  />
+				/>
 			</View>
 		);
 	}
 }
 HomeScreen.propTypes = {
   navigation: PropTypes.object.isRequired,
+};
+HomeScreen.navigationOptions = {
+  title: 'Search',
 };
 
 

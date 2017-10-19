@@ -15,13 +15,14 @@ class Search extends Component {
     this.onTyping = this.onTyping.bind(this);
     this.state = {
       Search: [],
-      data: []
+      data: [],
     }
+    this.navigation = this.props;
   }
 
 	componentDidMount() {
     this.setState({ Search: Services }); // populate state
-	}
+  }
 
   onTyping(text) {
     const Services = this.state.Search
@@ -33,8 +34,7 @@ class Search extends Component {
   }
   
   onSelect(value) {
-    // AlertIOS.alert('You choosed', value);
-    // console.log(this.props);
+
   }
 
   render() {
@@ -45,7 +45,7 @@ class Search extends Component {
 
             suggestions={this.state.data}
             onTyping={this.onTyping}
-            onSelect={this.onSelect}
+            onSelect={() => this.navigation.screenProps.dispatch({ type: 'Result' })}
 
             placeholder="What are you looking for?"
             clearButtonMode="always"
