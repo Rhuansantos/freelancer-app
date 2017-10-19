@@ -2,85 +2,47 @@ import  React, { Component }  from 'react';
 import {
   AppRegistry, StyleSheet, Text, View, AlertIOS, Dimensions, PixelRatio
 } from 'react-native';
-import axios from 'axios';
+// import axios from 'axios';
 
 import AutoComplete from 'react-native-autocomplete';
 import Services from '../../data.json';
 
-const {height, width} = Dimensions.get('window');
-
-const styles = StyleSheet.create({
-  autocomplete: {
-	// alignSelf: 'stretch',
-	  width: width / 1.1,
-    height: 50,
-    margin: 10,
-    marginTop: 50,
-    color: 'white',
-    // backgroundColor: '#FFF',
-    // borderColor: 'lightblue',
-    // borderWidth: 1,
-    borderBottomColor: 'white',
-		paddingBottom: 10,
-		borderBottomWidth: 1 / PixelRatio.get()
-  },
- container: {
-    flex: 1,
-    // backgroundColor: '#F5FCFF',
-  }
-});
 
 class Search extends Component {
-
-  state = { data: [] }
-
   constructor(props) {
     super(props);
     this.onTyping = this.onTyping.bind(this);
-    this.state.Search = [];
+    this.state = {
+      Search: [],
+      data: []
+    }
   }
 
-  	// api goes here
 	componentDidMount() {
-	// 	fetch('http://localhost:3000/service/findAll').then(res => res.json()).then((json) => {
-    //   const { results: seacrhQueries } = json;
-    //   	this.setState({ seacrhQueries });
-	// 	});
-
-
-		// let temp = [];
-
-		// axios.get('http://localhost:3000/service/findAll')
-		// .then((response) => {
-		// 	response.data.forEach(function(element) {
-		// 		temp.push(element.name);
-		// 	});
-		// })
-		// .catch(function (error) {
-		// 	console.log(error);
-		// });
-
-		// let values = ["Saab", "Volvo", "BMW"];
-		this.setState({ Search: Services });
-
-		// console.log(this.state.Search);
+    this.setState({ Search: Services }); // populate state
 	}
 
   onTyping(text) {
+    // const temp = [];
     const Services = this.state.Search
-        .filter(country => country.name.toLowerCase().startsWith(text.toLowerCase()))
-        .map(country => country.name);
+        .filter(services => services.name.toLowerCase().startsWith(text.toLowerCase()))
+        .map(services => services.name);
 
-    this.setState({ data: Services });
+    let temp = Array.from(new Set(Services)); // eliminate data that has been repetead
+    this.setState({ data: temp });
+    
+    // console.log(this.state.data);
+
   }
-
+  
   onSelect(value) {
-    // AlertIOS.alert('You choosed', value);
+    AlertIOS.alert('You choosed', value);
   }
 
   render() {
     return (
       <View style={styles.container}>
+      {console.log(this.state.data)}
         <AutoComplete
           style={styles.autocomplete}
 
@@ -116,5 +78,24 @@ class Search extends Component {
     );
   }
 }
+
+
+const {height, width} = Dimensions.get('window');
+
+const styles = StyleSheet.create({
+  autocomplete: {
+	  width: width / 1.1,
+    height: 50,
+    margin: 10,
+    marginTop: 50,
+    color: 'white',
+    borderBottomColor: 'white',
+		paddingBottom: 10,
+		borderBottomWidth: 1 / PixelRatio.get()
+  },
+ container: {
+    flex: 1,
+  }
+});
 
 export { Search };
