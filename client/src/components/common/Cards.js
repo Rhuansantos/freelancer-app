@@ -22,7 +22,7 @@ class Cards extends Component {
 		return(
 			<View style={styles.cardContainer}>
 				<View style={styles.imageContainer}>
-					<Image style={styles.profileImage} source={require('../../images/examples/12885852_1731167487105536_7785043722532779008_o.png')} />
+					<Image style={styles.profileImage} source={require('../../images/examples/profile.jpg')} />
 				</View>
 				<View style={styles.profileInfo}>
 					<Text style={styles.profileLabels}>Name: <Text style={styles.profileContent}>Rhuan</Text></Text>

@@ -13,6 +13,7 @@ class Search extends Component {
   constructor(props) {
     super(props);
     this.onTyping = this.onTyping.bind(this);
+    this.onSelect = this.onSelect.bind(this);
     this.state = {
       Search: [],
       data: [],
@@ -35,6 +36,7 @@ class Search extends Component {
   
   onSelect(value) {
 
+    this.navigation.screenProps.dispatch({ type: 'Result' });
   }
 
   render() {
@@ -45,7 +47,7 @@ class Search extends Component {
 
             suggestions={this.state.data}
             onTyping={this.onTyping}
-            onSelect={() => this.navigation.screenProps.dispatch({ type: 'Result' })}
+            onSelect={this.onSelect}
 
             placeholder="What are you looking for?"
             clearButtonMode="always"

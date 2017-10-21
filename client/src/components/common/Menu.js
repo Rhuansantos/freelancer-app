@@ -10,7 +10,7 @@ export default class Menu extends Component{
 			<View style={styles.menuContainer}>
 				<View>
 					<Image style={styles.profilePicture}
-					source={require('../../images/examples/12885852_1731167487105536_7785043722532779008_o.png')}/>
+					source={require('../../images/examples/profile.jpg')}/>
 				</View>
 
 			</View>

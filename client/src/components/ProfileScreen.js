@@ -16,7 +16,7 @@ export default class ProfileScreen extends Component{
 		return (
 			<ScrollView>
 				<View style={styles.container}>
-					<Image style={styles.profileImage} source={require('../images/examples/12885852_1731167487105536_7785043722532779008_o.png')} />
+					<Image style={styles.profileImage} source={require('../images/examples/profile.jpg')} />
 					<Text style={styles.profileName}>{'Rhuan Santos'.toUpperCase()}</Text>
 					<View style={styles.profileInfo}>
 						<Rating />
