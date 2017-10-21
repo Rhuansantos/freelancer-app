@@ -5,7 +5,9 @@ import {
 	Image, 
 	Dimensions, 
 	View,
-	Button} 
+	Button,
+	TouchableOpacity
+} 
 from 'react-native';
 import { Rating } from './';
 import Icon from 'react-native-vector-icons/FontAwesome';
@@ -14,27 +16,29 @@ class Cards extends Component {
 	seeMore(){
 		return null;
 	}
-	constructor(){
-		super();
+	constructor(props){
+		super(props);
 		this.data = [];
 	}
 	render(){
 		return(
-			<View style={styles.cardContainer}>
-				<View style={styles.imageContainer}>
-					<Image style={styles.profileImage} source={require('../../images/examples/12885852_1731167487105536_7785043722532779008_o.png')} />
+			<TouchableOpacity onPress={()=> this.props.screenProps.dispatch({ type: 'Profile' })}>
+				<View style={styles.cardContainer}>
+					<View style={styles.imageContainer}>
+						<Image style={styles.profileImage} source={require('../../images/examples/profile.jpg')} />
+					</View>
+					<View style={styles.profileInfo}>
+						<Text style={styles.profileLabels}>Name: <Text style={styles.profileContent}>Rhuan</Text></Text>
+						<Text style={styles.profileLabels}>Last Activity: <Text style={styles.profileContent}>3 days ago</Text></Text>
+						<Text style={styles.profileLabels}>Rating:  <Icon name="star" size={13} color="#336B9C" />
+						<Icon name="star" size={13} color="#336B9C" />
+						<Icon name="star" size={13} color="#336B9C" />
+						<Icon name="star" size={13} color="#336B9C" />
+						<Icon name="star-half-empty" size={13} color="#336B9C" />
+						</Text>
+					</View>
 				</View>
-				<View style={styles.profileInfo}>
-					<Text style={styles.profileLabels}>Name: <Text style={styles.profileContent}>Rhuan</Text></Text>
-					<Text style={styles.profileLabels}>Last Activity: <Text style={styles.profileContent}>3 days ago</Text></Text>
-					<Text style={styles.profileLabels}>Rating:  <Icon name="star" size={13} color="#336B9C" />
-					<Icon name="star" size={13} color="#336B9C" />
-					<Icon name="star" size={13} color="#336B9C" />
-					<Icon name="star" size={13} color="#336B9C" />
-					<Icon name="star-half-empty" size={13} color="#336B9C" />
-					</Text>
-				</View>
-			</View>
+			</TouchableOpacity>
 		);
 	}
 }

@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import {  Text, View, FlatList, Button, Image } from 'react-native';
-import { addNavigationHelpers, DrawerNavigator } from 'react-navigation';
+import {  Text, View, FlatList, Button, Image, Animated, Easing } from 'react-native';
+import { addNavigationHelpers, DrawerNavigator, StackNavigator, Transitioner } from 'react-navigation';
 
 import HomeScreen from './HomeScreen';
 import ProfileScreen from './ProfileScreen';
@@ -17,23 +17,21 @@ const noTransitionConfig = () => ({
   }
 })
 
-export const AppNavigator = DrawerNavigator({
+export const AppNavigator = StackNavigator({
   Main: { screen: HomeScreen },
   Result: { screen: ResultScreen },
   Profile: { screen: ProfileScreen }
 
-}, {
-  // Default config for all screens
-    drawerWidth: 300,
-    drawerPosition: 'left',
-    drawerBackgroundColor: 'blue',
-    useNativeAnimations: true,
-    // contentComponent: props => <Menu />  
+},{
+  navigationOptions: {
+    gesturesEnabled: true,
+  },
 });
 
 
+
 const AppWithNavigationState = ({ dispatch, nav }) => (
-  <AppNavigator navigation={addNavigationHelpers({ dispatch, state: nav })} />
+  <AppNavigator navigation={addNavigationHelpers({ dispatch, state: nav })} />  
 );
 
 AppWithNavigationState.propTypes = {
