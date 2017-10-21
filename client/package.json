@@ -4,8 +4,11 @@
   "private": true,
   "devDependencies": {
     "babel-preset-react-native-stage-0": "^1.0.1",
+    "flow-bin": "^0.56.0",
     "jest-expo": "^21.0.2",
-    "react-test-renderer": "16.0.0-alpha.12"
+    "react-test-renderer": "16.0.0-alpha.12",
+    "reactotron-react-native": "^1.12.3",
+    "redux-devtools": "^3.4.0"
   },
   "scripts": {
     "start": "react-native start",
@@ -17,7 +20,18 @@
     "preset": "jest-expo"
   },
   "dependencies": {
+    "axios": "^0.16.2",
+    "prop-types": "^15.6.0",
     "react": "16.0.0-alpha.12",
-    "react-native": "^0.48.4"
+    "react-native": "^0.49.2",
+    "react-native-animated-linear-gradient": "^1.0.2",
+    "react-native-autocomplete": "^0.3.0",
+    "react-native-linear-gradient": "^2.3.0",
+    "react-native-vector-icons": "^4.4.0",
+    "react-navigation": "^1.0.0-beta.13",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.2.0"
   }
 }
