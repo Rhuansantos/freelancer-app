@@ -5,54 +5,29 @@ import { Cards, Header, presetColors } from './common/';
 import AnimatedLinearGradient from 'react-native-animated-linear-gradient';
 
 
-
 class ResultScreen extends Component{
-
-	// define header of the page
-	static navigationOptions = {
-		drawerLabel: 'Results',
-		drawerIcon: () => (
-			<Image
-			  source={{uri: `https://dummyimage.com/60x60/000/fff.jpg&text=1`}}
-			  style={{width: 30, height: 30, borderRadius: 15}}
-			/>
-		  )
+	constructor(props) {
+		super(props);
+		this.renderCards = this.renderCards.bind(this);
 	}
 
-	static propTypes = {
-		navigation: PropTypes.object.isRequired
-	}
-
-	constructor() {
-		super();
-	}
-	
 	renderCards({item, index}){	
 		return(
 			<View>
-				<Cards />
+				<Cards screenProps={this.props.navigation} />
 			</View>
 		);
 	}
 	render() {
-		//the Header components should recive the navigation props
-		console.log(this.props.navigation);
 		return (
+			<AnimatedLinearGradient customColors={presetColors.mainBackground} speed={2000}>
 				<View style={styles.container}>
-				<AnimatedLinearGradient customColors={presetColors.mainBackground} speed={2000}>
-					<Header test={this.props.navigation.navigate} /> 
-					<Button
-						onPress={() => this.props.navigation.navigate('Profile')}
-						title="Learn More"
-						color="#841584"
-						accessibilityLabel="Learn more about this purple button"
-					/>
-					<FlatList
-					data={[{key: 'a'}, {key: 'b'}, {key: 'c'}, {key: 'd'}, {key: 'f'}, {key: 'g'}, {key: 'h'}]} // data goes here
-					renderItem={this.renderCards} // function to render the data
-					/>
-					</AnimatedLinearGradient>
+						<FlatList
+						data={[{key: 'a'}, {key: 'b'}, {key: 'c'}, {key: 'd'}, {key: 'f'}, {key: 'g'}, {key: 'h'}]} // data goes here
+						renderItem={this.renderCards} // function to render the data
+						/>
 				</View>
+			</AnimatedLinearGradient>
 		);
 	}
 }
@@ -62,7 +37,7 @@ const {height, width} = Dimensions.get('window');
 const styles = {
 	container: {
 	  flex: 1,
-	  marginTop: 50,
+	  marginTop: 10,
 	  justifyContent: 'center',
 	  alignItems: 'center'
 	}
