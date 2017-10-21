@@ -8,28 +8,31 @@ import {
 	Dimensions,
 	ScrollView 
 } from 'react-native';
-import { Rating } from './common/';
+import { Rating, presetColors } from './common/';
+import AnimatedLinearGradient from 'react-native-animated-linear-gradient';
 
 
 export default class ProfileScreen extends Component{
 	render() {
 		return (
-			<ScrollView>
-				<View style={styles.container}>
-					<Image style={styles.profileImage} source={require('../images/examples/profile.jpg')} />
-					<Text style={styles.profileName}>{'Rhuan Santos'.toUpperCase()}</Text>
-					<View style={styles.profileInfo}>
-						<Rating />
-						<Text style={styles.profileLabels}>DESCRIPTION:</Text>
-							<Text style={styles.profileDescription}>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry</Text>
-						<Text style={styles.profileLabels}>PRICE: <Text style={styles.profileDescription}>$18 per hour</Text></Text>	
+			<AnimatedLinearGradient customColors={presetColors.mainBackground} speed={2000}>
+				<ScrollView>
+					<View style={styles.container}>
+						<Image style={styles.profileImage} source={require('../images/examples/profile.jpg')} />
+						<Text style={styles.profileName}>{'Rhuan Santos'.toUpperCase()}</Text>
+						<View style={styles.profileInfo}>
+							<Rating />
+							<Text style={styles.profileLabels}>DESCRIPTION:</Text>
+								<Text style={styles.profileDescription}>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry</Text>
+							<Text style={styles.profileLabels}>PRICE: <Text style={styles.profileDescription}>$18 per hour</Text></Text>	
+						</View>
+						<View style={styles.profileJobs}>
+							<Text style={styles.profileLabels}>GALLERY</Text>
+							
+						</View>
 					</View>
-					<View style={styles.profileJobs}>
-						<Text style={styles.profileLabels}>GALLERY</Text>
-						
-					</View>
-				</View>
-			</ScrollView>
+				</ScrollView>
+			</AnimatedLinearGradient>
 		);
 	}
 }

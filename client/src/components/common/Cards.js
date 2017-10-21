@@ -44,6 +44,8 @@ const {height, width} = Dimensions.get('window');
 const styles = {
 	cardContainer: {
 		flex: 1,
+		width: '95%',
+		marginLeft: '2,7%',
 		height: 150,
 		flexDirection: 'row', 
 		flexWrap: 'wrap',

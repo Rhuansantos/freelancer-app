@@ -6,18 +6,16 @@ import AnimatedLinearGradient from 'react-native-animated-linear-gradient';
 
 
 export default class HomeScreen extends Component{
-
 	constructor(props){
 		super(props);
-		console.log(presetColors);
 	}
-	
 	searchResults({results, index}){
 		return(
 			<View style={{width: 100, height: 100}}>
 			</View>
 		);
 	}
+	
 	// 
 	render() {
 		return (
@@ -41,7 +39,7 @@ HomeScreen.propTypes = {
   navigation: PropTypes.object.isRequired,
 };
 HomeScreen.navigationOptions = {
-	// title: 'Search',
+	title: 'Search',
 	headerMode: 'none',
 	mode: 'modal',
 };
