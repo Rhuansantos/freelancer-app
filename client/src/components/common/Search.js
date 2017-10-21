@@ -2,12 +2,13 @@ import  React, { Component }  from 'react';
 import {
   AppRegistry, StyleSheet, Text, View, AlertIOS, Dimensions, PixelRatio, Button
 } from 'react-native';
-// import axios from 'axios';
+import axios from 'axios';
 
 import AutoComplete from 'react-native-autocomplete';
-import Services from '../../data.json';
+// import Services from '../../data.json';
 
 const {height, width} = Dimensions.get('window');
+const Services = null;
 
 class Search extends Component {
   constructor(props) {
@@ -22,6 +23,29 @@ class Search extends Component {
   }
 
 	componentDidMount() {
+
+    // Make a request for a user with a given ID
+    axios.get('/8000/service/findAll')
+    .then(function (response) {
+      console.log(response);
+      Services = response;
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+
+    // fetch('https://facebook.github.io/react-native/movies.json')
+    // .then((response) => response.json())
+    // .then((responseJson) => {
+    //   console.log(responseJson);
+    //   return responseJson.movies;
+    // })
+    // .catch((error) => {
+    //   console.error(error);
+    // });
+
+
+
     this.setState({ Search: Services }); // populate state
   }
 

@@ -1,11 +1,18 @@
-var express = require('express');
-var app = express();
+const express = require('express');
+const app = express();
+const https = require('https')
+const port = 8000;
 
-var port = 3000;
+
+
+const httpsOptions = {
+  key: fs.readFileSync('./key.pem'),
+  cert: fs.readFileSync('./cert.pem')
+}
 
 app.listen(port, function() {
   console.log('Server running on port: '+ port);
 });
 
-var appJS = require('./app/app.js')
+const appJS = require('./app/app.js')
 appJS(app);
