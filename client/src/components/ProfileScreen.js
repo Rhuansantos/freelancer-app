@@ -43,7 +43,8 @@ const styles = {
 	container: {
 	  flex: 1,
 	  marginTop: 50,
-	  alignItems: 'center'
+	  alignItems: 'center',
+	  backgroundColor: 'transparent'
 	},
 	profileName: {
 		color: 'white',

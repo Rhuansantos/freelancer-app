@@ -32,6 +32,12 @@ class ResultScreen extends Component{
 	}
 }
 
+
+ResultScreen.navigationOptions = {
+	title: 'Results',
+	headerMode: 'none',
+	mode: 'modal',
+};
 const {height, width} = Dimensions.get('window');
 
 const styles = {
