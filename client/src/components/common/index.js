@@ -3,3 +3,4 @@ export * from './Cards';
 export * from './Search';
 export * from './Spinner';
 export * from './Header';
+export * from './GlobalVariables';
