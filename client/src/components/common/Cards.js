@@ -22,13 +22,13 @@ class Cards extends Component {
 	}
 	render(){
 		return(
-			<TouchableOpacity onPress={()=> this.props.screenProps.dispatch({ type: 'Profile' })}>
+			<TouchableOpacity onPress={()=> this.props.screenProps.navigate('Profile', this.props.data)}>
 				<View style={styles.cardContainer}>
 					<View style={styles.imageContainer}>
-						<Image style={styles.profileImage} source={require('../../images/examples/profile.jpg')} />
+					<Image style={styles.profileImage} source={{uri: this.props.data.profile_image}} />
 					</View>
 					<View style={styles.profileInfo}>
-						<Text style={styles.profileLabels}>Name: <Text style={styles.profileContent}>Rhuan</Text></Text>
+						<Text style={styles.profileLabels}>Name: <Text style={styles.profileContent}>{this.props.data.name}</Text></Text>
 						<Text style={styles.profileLabels}>Last Activity: <Text style={styles.profileContent}>3 days ago</Text></Text>
 						<Text style={styles.profileLabels}>Rating:  <Icon name="star" size={13} color="#336B9C" />
 						<Icon name="star" size={13} color="#336B9C" />

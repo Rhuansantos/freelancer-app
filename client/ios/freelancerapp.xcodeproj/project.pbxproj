@@ -42,6 +42,7 @@
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		6382EF0C25C14236B2977E4A /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A49CDC09E78540DDBAE1F221 /* Entypo.ttf */; };
 		6517A036565F4737BE441836 /* libBVLinearGradient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BEDAC06970314A1FB8E03E86 /* libBVLinearGradient.a */; };
+		6F29C7991F9BD1950056F85A /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F29C7981F9BD1950056F85A /* ExternalAccessory.framework */; };
 		6F2BA1571F95803F0071ED18 /* libRCTAutoComplete.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F2BA1351F9580030071ED18 /* libRCTAutoComplete.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		8845BDD0D7444A3381677236 /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 705678772EDA43488F4D7EFA /* MaterialCommunityIcons.ttf */; };
@@ -353,6 +354,8 @@
 		2D02E4901E0B4A5D006451C7 /* freelancerapp-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "freelancerapp-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		6F299E31488F48ABB85C991D /* BVLinearGradient.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = BVLinearGradient.xcodeproj; path = "../node_modules/react-native-linear-gradient/BVLinearGradient.xcodeproj"; sourceTree = "<group>"; };
+		6F29C7981F9BD1950056F85A /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
+		6F29C79A1F9BD1950056F85A /* freelancerapp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = freelancerapp.entitlements; path = freelancerapp/freelancerapp.entitlements; sourceTree = "<group>"; };
 		6FDDE2381F85E74F00A638AD /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Fonts; path = "../node_modules/react-native-vector-icons/Fonts"; sourceTree = "<group>"; };
 		705678772EDA43488F4D7EFA /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
 		76197D68B0B3499AB146CE4A /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
@@ -395,6 +398,7 @@
 				00C302E81ABCBA2D00DB3ED1 /* libRCTImage.a in Frameworks */,
 				133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */,
 				00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */,
+				6F29C7991F9BD1950056F85A /* ExternalAccessory.framework in Frameworks */,
 				139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */,
 				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
@@ -511,6 +515,7 @@
 		13B07FAE1A68108700A75B9A /* freelancerapp */ = {
 			isa = PBXGroup;
 			children = (
+				6F29C79A1F9BD1950056F85A /* freelancerapp.entitlements */,
 				6FDDE2381F85E74F00A638AD /* Fonts */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
@@ -561,6 +566,7 @@
 		6F2BA1561F95803F0071ED18 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6F29C7981F9BD1950056F85A /* ExternalAccessory.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -779,6 +785,9 @@
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.WAC = {
 								enabled = 1;
 							};
 						};
@@ -1332,6 +1341,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = freelancerapp/freelancerapp.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1363,6 +1373,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = freelancerapp/freelancerapp.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;

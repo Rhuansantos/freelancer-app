@@ -10,6 +10,7 @@
     "body-parser": "^1.15.2",
     "elasticsearch": "^13.3.1",
     "express": "^4.14.0",
+    "express-force-ssl": "^0.3.2",
     "glob": "^7.1.1",
     "hbs": "^4.0.1",
     "mongodb": "^2.2.33",

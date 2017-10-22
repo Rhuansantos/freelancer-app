@@ -14,7 +14,7 @@ class ResultScreen extends Component{
 	renderCards({item, index}){	
 		return(
 			<View>
-				<Cards screenProps={this.props.navigation} />
+				<Cards data={item} screenProps={this.props.navigation} />
 			</View>
 		);
 	}
@@ -23,8 +23,9 @@ class ResultScreen extends Component{
 			<AnimatedLinearGradient customColors={presetColors.mainBackground} speed={2000}>
 				<View style={styles.container}>
 						<FlatList
-						data={[{key: 'a'}, {key: 'b'}, {key: 'c'}, {key: 'd'}, {key: 'f'}, {key: 'g'}, {key: 'h'}]} // data goes here
+						data={this.props.navigation.state.params} // data goes here
 						renderItem={this.renderCards} // function to render the data
+						keyExtractor={(item, index) => index}
 						/>
 				</View>
 			</AnimatedLinearGradient>

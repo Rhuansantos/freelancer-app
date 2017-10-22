@@ -2,12 +2,13 @@ import  React, { Component }  from 'react';
 import {
   AppRegistry, StyleSheet, Text, View, AlertIOS, Dimensions, PixelRatio, Button
 } from 'react-native';
-// import axios from 'axios';
+import axios from 'axios';
 
 import AutoComplete from 'react-native-autocomplete';
 import Services from '../../data.json';
 
 const {height, width} = Dimensions.get('window');
+// const Services = null;
 
 class Search extends Component {
   constructor(props) {
@@ -26,17 +27,18 @@ class Search extends Component {
   }
 
   onTyping(text) {
+    console.log(this.state.Search);
     const Services = this.state.Search
-        .filter(services => services.name.toLowerCase().startsWith(text.toLowerCase()))
-        .map(services => services.name);
+        .filter(services => services.servicesName.toLowerCase().startsWith(text.toLowerCase()))
+        .map(services => services.servicesName);
 
     let temp = Array.from(new Set(Services)); // eliminate data that has been repetead
     this.setState({ data: temp });
   }
   
   onSelect(value) {
-
-    this.navigation.screenProps.dispatch({ type: 'Result' });
+    // this.navigation.screenProps.dispatch({ type: 'Result' }); // redux
+    this.navigation.screenProps.navigate('Result', this.state.Search); 
   }
 
   render() {
