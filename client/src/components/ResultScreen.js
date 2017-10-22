@@ -9,6 +9,8 @@ class ResultScreen extends Component{
 	constructor(props) {
 		super(props);
 		this.renderCards = this.renderCards.bind(this);
+		console.log('results page');
+		console.log(this);
 	}
 
 	renderCards({item, index}){	

@@ -47,13 +47,13 @@ class Search extends Component {
   }
   
   onSelect(value) {
-    this.navigation.screenProps.dispatch({ type: 'Result' });
+    // this.navigation.screenProps.dispatch({ type: 'Result' }); // redux
+    this.navigation.screenProps.navigate('Result', this.state.Search); 
   }
 
   render() {
     return (
         <View style={styles.container}>
-        {console.log(this)}
           <AutoComplete
             style={styles.autocomplete}
 
