@@ -40,8 +40,7 @@ HomeScreen.propTypes = {
 };
 HomeScreen.navigationOptions = {
 	title: 'Search',
-	headerMode: 'none',
-	mode: 'modal',
+	header: null
 };
 
 

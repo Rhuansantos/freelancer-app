@@ -5,10 +5,10 @@ import {
 import axios from 'axios';
 
 import AutoComplete from 'react-native-autocomplete';
-// import Services from '../../data.json';
+import Services from '../../data.json';
 
 const {height, width} = Dimensions.get('window');
-const Services = null;
+// const Services = null;
 
 class Search extends Component {
   constructor(props) {
@@ -23,33 +23,21 @@ class Search extends Component {
   }
 
 	componentDidMount() {
+    // let Services = [];
 
-    // Make a request for a user with a given ID
-    axios.get('/8000/service/findAll')
-    .then(function (response) {
-      console.log(response);
-      Services = response;
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
-
-    // fetch('https://facebook.github.io/react-native/movies.json')
-    // .then((response) => response.json())
-    // .then((responseJson) => {
-    //   console.log(responseJson);
-    //   return responseJson.movies;
+    // axios.get('http://localhost:8080/service/findAll')
+    // .then(function (response) {
+    //   Services.push(response.data);
     // })
-    // .catch((error) => {
-    //   console.error(error);
+    // .catch(function (error) {
+    //   console.log(error);
     // });
-
-
 
     this.setState({ Search: Services }); // populate state
   }
 
   onTyping(text) {
+    console.log(this.state.Search);
     const Services = this.state.Search
         .filter(services => services.name.toLowerCase().startsWith(text.toLowerCase()))
         .map(services => services.name);
@@ -59,13 +47,13 @@ class Search extends Component {
   }
   
   onSelect(value) {
-
     this.navigation.screenProps.dispatch({ type: 'Result' });
   }
 
   render() {
     return (
         <View style={styles.container}>
+        {console.log(this)}
           <AutoComplete
             style={styles.autocomplete}
 
