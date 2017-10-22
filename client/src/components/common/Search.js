@@ -23,24 +23,14 @@ class Search extends Component {
   }
 
 	componentDidMount() {
-    // let Services = [];
-
-    // axios.get('http://localhost:8080/service/findAll')
-    // .then(function (response) {
-    //   Services.push(response.data);
-    // })
-    // .catch(function (error) {
-    //   console.log(error);
-    // });
-
     this.setState({ Search: Services }); // populate state
   }
 
   onTyping(text) {
     console.log(this.state.Search);
     const Services = this.state.Search
-        .filter(services => services.name.toLowerCase().startsWith(text.toLowerCase()))
-        .map(services => services.name);
+        .filter(services => services.servicesName.toLowerCase().startsWith(text.toLowerCase()))
+        .map(services => services.servicesName);
 
     let temp = Array.from(new Set(Services)); // eliminate data that has been repetead
     this.setState({ data: temp });
