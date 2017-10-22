@@ -19,12 +19,10 @@ class Cards extends Component {
 	constructor(props){
 		super(props);
 		this.data = [];
-		// console.log(this.props.data);
 	}
-	// <Image style={styles.profileImage} source={require(''+ this.props.data.profile_image + '')} />
 	render(){
 		return(
-			<TouchableOpacity onPress={()=> this.props.screenProps.dispatch({ type: 'Profile' })}>
+			<TouchableOpacity onPress={()=> this.props.screenProps.navigate('Profile', this.props.data)}>
 				<View style={styles.cardContainer}>
 					<View style={styles.imageContainer}>
 					<Image style={styles.profileImage} source={{uri: this.props.data.profile_image}} />
