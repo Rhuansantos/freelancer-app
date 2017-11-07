@@ -34,6 +34,7 @@ Initial proof-of-concept. [IN PROGRESS]
 - [ ] Amamzon Alexa API
 
 
+## Contributions
 
 **Before submitting a pull request,** please make sure the following is done:
 
