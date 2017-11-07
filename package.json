@@ -1,0 +1,11 @@
+{
+  "name": "freelancer-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "cd client && npm install && react-native start",
+    "android": "cd client && react-native run-android",
+    "ios": "cd client && react-native run-ios",
+    "test": "echo any tests where found"
+  }
+}
