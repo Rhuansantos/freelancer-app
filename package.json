@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "start": "cd client && npm install && react-native start",
+    "flow": "cd client && yarn flow",
     "android": "cd client && react-native run-android",
     "ios": "cd client && react-native run-ios",
     "test": "echo any tests where found"

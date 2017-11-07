@@ -1,7 +1,9 @@
 {
-  "presets": [
-    "babel-preset-react-native-stage-0/decorator-support"
-  ],
+  // "presets": [
+  //   // "babel-preset-react-native-stage-0/decorator-support"
+    
+  // ],
+  "presets": ["flow"],
   "env": {
     "development": {
       "plugins": [
