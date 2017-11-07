@@ -3,7 +3,14 @@
 
 [![CircleCI](https://circleci.com/gh/Rhuansantos/freelancer-app/tree/master.svg?style=svg)](https://circleci.com/gh/Rhuansantos/freelancer-app/tree/master)
 
+## Installation
 
+`npm install or yarn install`
+
+
+## Runing application
+
+`npm start or yarn start`
 
 ## Roadmap
 
